@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass10_3</title>
+    <style>
+        #d1 {
+            border: 2px solid black;
+            color: aliceblue;
+            background-color: black;
+            width: 27%;
+            height: 350px;
+            align-content: center;
+        }
+
+        #f1,
+        #f2 {
+            border-radius: 10px;
+            border-color: blue;
+        }
+
+
+        #btn {
+            margin-left: 40px;
+            background-color: blue;
+            color: white;
+        }
+
+        #l1,
+        #l2,
+        #s1 {
+            background-color: blue;
+
+        }
+    </style>
+    <script>
+        function myfuction() {
+            var a = document.getElementById("pass");
+
+            if (a.type === "password")
+                a.type = "text";
+            else
+                a.type = "password";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="d1">
+        <form>
+
+            <fieldset id="f1">
+                <legend id="l1">Name and address</legend>
+                <table>
+                    <tr>
+                        <td><label for="ssn">SSN : </label> </td>
+                        <td><input type="text" id="ssn" name="ssn" required /></td>
+                        <td>
+                            <pre id="s1">Fill in name and address</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="in">Full Name : </label></td>
+                        <td><input type="text" id="in" name="in" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sn">Street and Number : </label></td>
+                        <td><input type="text" id="sn" name="sn" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pc">Postal Code : </label></td>
+                        <td><input type="text" id="pc" name="pc" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="c">City : </label></td>
+                        <td><input type="text" id="c" name="c" /></td>
+                    </tr>
+                </table>
+
+            </fieldset>
+            <br>
+
+
+            <fieldset id="f2">
+                <legend id="l2">Username and Password</legend>
+                <table>
+                    <tr>
+                        <td><label for="user">Username : </label></td>
+                        <td><input type="text" id="user" name="user" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Password : </label></td>
+                        <td><input type="password" id="pass" name="pass" /><input type="checkbox" name="pass" id="ch"
+                                onclick="myfuction()">show Password</td>
+
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <button type="submit" id="btn">Register</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
